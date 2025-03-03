@@ -4,6 +4,6 @@ public class App
 {
     public static void main( String[] args )
     {
-
+        System.out.println( "Lab 4: Java NIO and Object Serialization." );
     }
 }

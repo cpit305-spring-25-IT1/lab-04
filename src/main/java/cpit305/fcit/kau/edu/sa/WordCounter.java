@@ -6,17 +6,17 @@ import java.net.URL;
 import java.util.List;
 
 public class WordCounter {
-    private static final String MOBY_DICK_URL = "https://www.gutenberg.org/cache/epub/2701/pg2701.txt";
 
-    public static long countWords() throws IOException {
+    public static long countWordsByFileUrl(String downloadUrl) throws IOException {
         // Download file
-        Path tempFile = Files.createTempFile("moby-dick", ".txt");
-        URL url = new URL(MOBY_DICK_URL);
+        Path tempFile = Files.createTempFile("tmpFile", ".txt");
+        URL url = new URL(downloadUrl);
         Files.copy(url.openStream(), tempFile, StandardCopyOption.REPLACE_EXISTING);
 
         // Count words using simple string operations
         long wordCount = 0;
         try {
+
             return wordCount;
         } finally {
 
